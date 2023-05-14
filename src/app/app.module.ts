@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CreateCategoryComponent } from './components/create-category/create-category.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { GetAppointmentsComponent } from './components/get-appointments/get-appointments.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     CreateCategoryComponent,
     LoginComponent,
+    GetAppointmentsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
