@@ -1,0 +1,78 @@
+<div
+  class="image"
+  style="
+    background-image: url('../../../assets/images/fondo-plomo.jpg');
+    overflow-y: hidden;
+  ">
+  <app-navbar></app-navbar>
+  <div class="row" style="align-items: center">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+      <div class="card text-center sombreado">
+        <div class="card-body">
+          <h3 class="card-title">Formulario de Registro de Usuario</h3>
+
+          <div class="row">
+            <div class="col-md-6 col-sm-3">
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                name="name"
+                placeholder="Ingresar Nombre"
+                [(ngModel)]="name" />
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingresar Apellidos"
+                [(ngModel)]="lastname" />
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="col-md-6 col-sm-3">
+              <input
+                type="text"
+                id="ci"
+                class="form-control"
+                name="ci"
+                placeholder="Ingresar Carnet de Identidad"
+                [(ngModel)]="ci" />
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingresar Numero de Telefono"
+                [(ngModel)]="telephoneNumber" />
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="col-md-6 col-sm-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingresar Correo"
+                [(ngModel)]="email" />
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Ingresar Contraseña"
+                [(ngModel)]="password" />
+            </div>
+          </div>
+          <input
+            type="text"
+            value="Registrar"
+            class="btn btn-dark"
+            (click)="registerBeautician()"
+            style="margin-top: 10px; margin-left: 10px" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
