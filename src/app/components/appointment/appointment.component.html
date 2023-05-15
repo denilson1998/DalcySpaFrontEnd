@@ -1,0 +1,117 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="container">
+    <form id="form" style="margin-top: 4rem">
+      <h3>Formulario de Citas</h3>
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Descripción:</label
+            >
+            <div class="input-group">
+              <textarea
+                class="form-control"
+                name="description"
+                [(ngModel)]="description"
+                aria-label="With textarea"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-6">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Seleccione una categoría:</label
+            >
+            <select
+              class="form-select"
+              name="category"
+              aria-label="Default select example"
+              [(ngModel)]="category"
+              (ngModelChange)="getServices()">
+              <option *ngFor="let item of categories" [value]="item.id">
+                {{ item.nombre }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Servicios:</label
+            >
+            <select
+              class="form-select"
+              name="service"
+              aria-label="Default select example"
+              [(ngModel)]="service"
+              (ngModelChange)="getTurnOfaService()">
+              <option *ngFor="let item of services" [value]="item.id">
+                {{ item.nombre }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-6">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Turnos:</label
+            >
+            <select
+              class="form-select"
+              name="turns"
+              aria-label="Default select example"
+              [(ngModel)]="turn">
+              <option *ngFor="let item of turns" [value]="item.id_turno">
+                De {{ item.hora_inicio }} a {{ item.hora_fin }} de la
+                {{ item.descripcion }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6">
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Esteticistas:</label
+            >
+            <select
+              class="form-select"
+              name="beauticians"
+              aria-label="Default select example"
+              [(ngModel)]="beautician">
+              <option *ngFor="let item of beauticians" [value]="item.id">
+                {{ item.nombre }} {{ item.apellido }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-12">
+          <div class="mb-3" style="text-align: center !important">
+            <!-- <label for="exampleInputPassword1" class="form-label">Seleccione una Fecha</label> -->
+            <ngx-datepicker
+              id="finalDate"
+              name="finalDate"
+              class="date-picker"
+              [(ngModel)]="date"
+              [options]="options"></ngx-datepicker>
+          </div>
+        </div>
+      </div>
+      <div class="" style="text-align: center; margin-top: 1rem">
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="saveAppointment()">
+          Registrar Cita
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+<app-footer></app-footer>

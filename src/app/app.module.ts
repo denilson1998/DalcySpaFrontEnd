@@ -14,6 +14,8 @@ import { GetAppointmentsComponent } from './components/get-appointments/get-appo
 import { RegisterComponent } from './components/register/register.component';
 import { RegisterBeauticiansByAdmComponent } from './components/register-beauticians-by-adm/register-beauticians-by-adm.component';
 import { CreateServiceComponent } from './components/create-service/create-service.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
+import { DatepickerModule } from 'ng2-datepicker';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,15 @@ import { CreateServiceComponent } from './components/create-service/create-servi
     RegisterComponent,
     RegisterBeauticiansByAdmComponent,
     CreateServiceComponent,
+    AppointmentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    DatepickerModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
