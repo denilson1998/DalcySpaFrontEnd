@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="table-container table-responsive">
+        <table class="table table-dark table-bordered border-white table-hover">
+          <thead class="text-center">
+            <tr>
+              <!-- <th><abbr title="Position">Pos</abbr></th> -->
+              <!-- <th>Cuf</th> -->
+              <th class="col-sm-3">Descripción</th>
+              <th class="col-sm-3">Servicio</th>
+              <th class="col-sm-2">Hora de Inicio</th>
+              <th class="col-sm-2">Fecha Agendada</th>
+              <th class="col-sm-2">Seguimiento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr class="table-info border-dark" [hidden]="variable2">
+                            <td [colSpan]=" 9 " class="centered">
+                                No hay Datos para la Busqueda!
+                            </td>
+                        </tr> -->
+            <tr
+              class="table-info border-dark"
+              *ngFor="let appointment of appointments">
+              <td>
+                <p class="p2">{{ appointment.descripcion }}</p>
+              </td>
+              <td>
+                <p class="center-pharagraph">{{ appointment.nombre }}</p>
+              </td>
+              <td>
+                <p class="center-pharagraph">{{ appointment.hora_inicio }}</p>
+              </td>
+              <td>
+                <p class="center-pharagraph">{{ appointment.fecha }}</p>
+              </td>
+              <td style="align-items: center; text-align: center">
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  class="btn btn-primary btn-sm"
+                  (click)="getAppointmentId(appointment.id)">
+                  Añadir Seg. a la Cita
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="ul" style="margin-top: 10px; position: relative; align-items: center; margin-bottom: 100px;">
+                <pagination-controls (pageChange)="current_page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+                
+            </div> -->
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header centered">
+        <h5 class="modal-title" id="staticBackdropLabel">
+          Formulario de Seguimiento
+        </h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Escribir Descripcion del Seguimiento"
+          [(ngModel)]="description" />
+        <br />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Diagnóstico"
+          [(ngModel)]="diagnostic" />
+      </div>
+      <div class="modal-footer centered">
+        <button type="button" class="btn btn-primary" (click)="postObs()">
+          Guardar Seguimiento
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
