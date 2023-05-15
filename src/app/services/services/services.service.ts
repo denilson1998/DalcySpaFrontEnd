@@ -24,4 +24,13 @@ export class ServicesService {
   postService(data: any): Observable<any> {
     return this._requestService.post('postService', data);
   }
+  getServices(category: any): Observable<any> {
+    return this._requestService.post('getServicesByCategory', category);
+  }
+  getTurnOfaService(service: any): Observable<any> {
+    return this._requestService.get(`turnsOfService/${service}`);
+  }
+  getBeauticians(): Observable<any> {
+    return this._requestService.get('getEsteticistas');
+  }
 }

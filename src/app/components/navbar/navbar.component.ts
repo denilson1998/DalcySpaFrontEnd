@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
       timer: 2000,
     });
     setTimeout(() => {
-      //this.router.navigate(["/login"]);
+      this.router.navigate(['/login']);
     }, 2500);
   }
 
@@ -41,7 +41,17 @@ export class NavbarComponent implements OnInit {
     const rolId = +Utils.get('rolId')!;
     const nameRol = Utils.get('nameRol')!;
 
-    if (rolId == 1 && nameRol == 'admin') {
+    if (nameRol == 'cliente') {
+      this.hiddenForClient = false;
+      this.hiddenForAdm = true;
+      this.hiddeForBeautician = true;
+    }
+    if (nameRol == 'esteticista') {
+      this.hiddeForBeautician = false;
+      this.hiddenForClient = true;
+      this.hiddenForAdm = true;
+    }
+    if (nameRol == 'admin') {
       this.hiddenForAdm = false;
       this.hiddenForClient = true;
       this.hiddeForBeautician = true;

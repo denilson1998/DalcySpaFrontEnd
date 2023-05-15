@@ -23,8 +23,19 @@
             >Registrar Esteticistas</a
           >
         </li>
+        <li class="nav-item" [hidden]="hiddenForClient">
+          <a class="nav-link" href="/appointment">Agendar Cita</a>
+        </li>
+        <li class="nav-item" [hidden]="hiddenForClient">
+          <a class="nav-link" href="/getAppointments">Citas Agendadas</a>
+        </li>
         <li class="nav-item" [hidden]="hiddenForAdm">
           <a class="nav-link" href="/createService">Crear Servicio</a>
+        </li>
+        <li class="nav-item" [hidden]="hiddeForBeautician">
+          <a class="nav-link" href="/Appointments-for-Beautician"
+            >Seguimiento de Citas</a
+          >
         </li>
         <li class="nav-item" [hidden]="hiddenForAdm">
           <a class="nav-link" href="/createCategory">Crear Categoria</a>
