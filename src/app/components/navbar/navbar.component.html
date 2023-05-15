@@ -18,6 +18,17 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/home">Home</a>
         </li>
+        <li class="nav-item" [hidden]="hiddenForAdm">
+          <a class="nav-link" href="/registerBeauticians"
+            >Registrar Esteticistas</a
+          >
+        </li>
+        <li class="nav-item" [hidden]="hiddenForAdm">
+          <a class="nav-link" href="/createService">Crear Servicio</a>
+        </li>
+        <li class="nav-item" [hidden]="hiddenForAdm">
+          <a class="nav-link" href="/createCategory">Crear Categoria</a>
+        </li>
       </ul>
       <form class="d-flex">
         <button class="btn btn-dark" type="submit" (click)="logout()">

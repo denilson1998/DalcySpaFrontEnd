@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { GetAppointmentsComponent } from './components/get-appointments/get-appointments.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RegisterBeauticiansByAdmComponent } from './components/register-beauticians-by-adm/register-beauticians-by-adm.component';
+import { CreateServiceComponent } from './components/create-service/create-service.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { RegisterBeauticiansByAdmComponent } from './components/register-beautic
     GetAppointmentsComponent,
     RegisterComponent,
     RegisterBeauticiansByAdmComponent,
+    CreateServiceComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

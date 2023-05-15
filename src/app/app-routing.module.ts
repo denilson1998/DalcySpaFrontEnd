@@ -6,6 +6,7 @@ import { GetAppointmentsComponent } from './components/get-appointments/get-appo
 import { RegisterComponent } from './components/register/register.component';
 import { RegisterBeauticiansByAdmComponent } from './components/register-beauticians-by-adm/register-beauticians-by-adm.component';
 import { CreateCategoryComponent } from './components/create-category/create-category.component';
+import { CreateServiceComponent } from './components/create-service/create-service.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'registerBeauticians', component: RegisterBeauticiansByAdmComponent },
   { path: 'createCategory', component: CreateCategoryComponent },
+  { path: 'createService', component: CreateServiceComponent },
   { path: '**', redirectTo: '/login', pathMatch: 'full' },
 ];
 
