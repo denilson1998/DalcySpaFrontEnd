@@ -16,6 +16,7 @@ import { RegisterBeauticiansByAdmComponent } from './components/register-beautic
 import { CreateServiceComponent } from './components/create-service/create-service.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { DatepickerModule } from 'ng2-datepicker';
+import { GetAppointmentsForBeauticianComponent } from './components/get-appointments-for-beautician/get-appointments-for-beautician.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DatepickerModule } from 'ng2-datepicker';
     RegisterBeauticiansByAdmComponent,
     CreateServiceComponent,
     AppointmentComponent,
+    GetAppointmentsForBeauticianComponent,
   ],
   imports: [
     BrowserModule,
