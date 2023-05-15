@@ -11,6 +11,8 @@ import { CreateCategoryComponent } from './components/create-category/create-cat
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { GetAppointmentsComponent } from './components/get-appointments/get-appointments.component';
+import { RegisterComponent } from './components/register/register.component';
+import { RegisterBeauticiansByAdmComponent } from './components/register-beauticians-by-adm/register-beauticians-by-adm.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { GetAppointmentsComponent } from './components/get-appointments/get-appo
     CreateCategoryComponent,
     LoginComponent,
     GetAppointmentsComponent,
+    RegisterComponent,
+    RegisterBeauticiansByAdmComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
