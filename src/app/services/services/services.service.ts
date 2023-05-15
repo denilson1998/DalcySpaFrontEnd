@@ -20,4 +20,8 @@ export class ServicesService {
   postCategory(data: CategoryPost): Observable<any> {
     return this._requestService.post('postCategory', data);
   }
+
+  postService(data: any): Observable<any> {
+    return this._requestService.post('postService', data);
+  }
 }
